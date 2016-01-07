@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/* $(document).ready(function() {
 
 // determine color and transparency of the markers
 

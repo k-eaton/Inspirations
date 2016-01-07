@@ -1,10 +1,16 @@
 require 'unirest'
 require 'httparty'
 require 'dotenv'
+require 'twilio-ruby'
 
+
+
+ 
 get '/' do
+    'Hello World! Currently running version ' + Twilio::VERSION + \
+        ' of the twilio-ruby library.'
 
-  erb :index
+    # erb :index
 end
 
 # post '/' do
@@ -18,31 +24,31 @@ end
 #   {reports: latlong}.to_json
 # end
 
-get '/drugs' do
-  @transport = params[:drugs].to_s
-  @dealer = params[:dealers].to_s
-  puts @dealer
-  puts @transport
-  @drugs = Report.where("description LIKE ?", '%'+@transport+'%')
-  scores = {}
-  if @dealer == "false"
-    @drugs.each do |report|
-      # if report.sale == false
-        latlong = [report.long.to_f, report.lat.to_f, "#{@transport}"]
-        scores[report.id.to_i] = latlong
-      # end
-    end
-  else
-    @drugs.each do |report|
-      if report.sale == true
-        latlong = [report.long.to_f, report.lat.to_f, "#{@transport}"]
-        scores[report.id.to_i] = latlong
-      end
-    end
-  end
-  content_type :json
-  scores.to_json
-end
+# get '/drugs' do
+#   @transport = params[:drugs].to_s
+#   @dealer = params[:dealers].to_s
+#   puts @dealer
+#   puts @transport
+#   @drugs = Report.where("description LIKE ?", '%'+@transport+'%')
+#   scores = {}
+#   if @dealer == "false"
+#     @drugs.each do |report|
+#       # if report.sale == false
+#         latlong = [report.long.to_f, report.lat.to_f, "#{@transport}"]
+#         scores[report.id.to_i] = latlong
+#       # end
+#     end
+#   else
+#     @drugs.each do |report|
+#       if report.sale == true
+#         latlong = [report.long.to_f, report.lat.to_f, "#{@transport}"]
+#         scores[report.id.to_i] = latlong
+#       end
+#     end
+#   end
+#   content_type :json
+#   scores.to_json
+# end
 
 # get '/crime-data' do
 
@@ -81,30 +87,30 @@ end
 # 	erb :seeding
 # end
 
-get '/sf' do
+# get '/sf' do
 
-  response = HTTParty.get ("http://sanfrancisco.crimespotting.org/crime-data?format=json&count=5000&type=Na&dstart=2009-01-01")
+#   response = HTTParty.get ("http://sanfrancisco.crimespotting.org/crime-data?format=json&count=5000&type=Na&dstart=2009-01-01")
 
-  @data = response["features"]
-  @data.each do |crime|
-    unless crime["properties"]["description"].to_s.include? "PARAPHERNALIA"
-      if crime["properties"]["description"].to_s.include? "SALE"
-        Report.create(popo_id: crime["id"],
-                      description: crime["properties"]["description"],
-                      lat: crime["geometry"]["coordinates"][1],
-                      long: crime["geometry"]["coordinates"][0],
-                      datetime: crime["properties"]["date_time"],
-                      sale: true)
-      else
-        Report.create(popo_id: crime["id"],
-                      description: crime["properties"]["description"],
-                      lat: crime["geometry"]["coordinates"][1],
-                      long: crime["geometry"]["coordinates"][0],
-                      datetime: crime["properties"]["date_time"],
-                      sale: false)
-      end
-    end
-  end
+#   @data = response["features"]
+#   @data.each do |crime|
+#     unless crime["properties"]["description"].to_s.include? "PARAPHERNALIA"
+#       if crime["properties"]["description"].to_s.include? "SALE"
+#         Report.create(popo_id: crime["id"],
+#                       description: crime["properties"]["description"],
+#                       lat: crime["geometry"]["coordinates"][1],
+#                       long: crime["geometry"]["coordinates"][0],
+#                       datetime: crime["properties"]["date_time"],
+#                       sale: true)
+#       else
+#         Report.create(popo_id: crime["id"],
+#                       description: crime["properties"]["description"],
+#                       lat: crime["geometry"]["coordinates"][1],
+#                       long: crime["geometry"]["coordinates"][0],
+#                       datetime: crime["properties"]["date_time"],
+#                       sale: false)
+#       end
+#     end
+#   end
 
-  erb :seeding
-end
+#   erb :seeding
+# end
