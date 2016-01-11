@@ -1,25 +1,10 @@
-<img src="/img/Scorz.png" alt="Scorz" />
 
-<div class="menu">
-  <form action="/drugs" method="get" id="options">
+<ul>
 
-    <input type="checkbox" name="dealers" value="true" id="dealers"> Dealers
+<% @quotes.each do |quote| %>
 
-    <p>
-      <select name="drugs" id="dropdown">
-        <option value="blank"> ----- </option>
-        <option value="MARIJUANA">Marijuana</option>
-        <option value="COCAINE">Cocaine &amp; Crack</option>
-        <option value="HEROIN">Heroin</option>
-        <option value="METH">Methamphetamine</option>
-        <option value="OPIUM">Opium</option>
-        <option value="HALLUCINOGENIC">Hallucinogens</option>
-      </select>
-    </p>
-    
-  </form>
-</div>
+  <li><%= quote.quote %></li>
 
-<div id="map-canvas"></div>
+<% end %>
 
-<p>Scorz data pulled from the arrest records provided by the <a href="http://sanfrancisco.crimespotting.org/api">San Francisco Crimespotting API</a>.</p>
+</ul>

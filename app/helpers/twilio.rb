@@ -2,9 +2,9 @@
 require 'dotenv'
 require 'twilio-ruby'
 
-
-module Twilio
-	def self.text()#phone_numbers, quote)
+helpers do
+# module Twilio
+	def text()#phone_numbers, quote)
 		# put your own credentials here 
 		account_sid = ENV['ACCOUNT_SID'] 
 		auth_token = ENV['AUTH_TOKEN'] 

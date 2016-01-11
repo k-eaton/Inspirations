@@ -2,7 +2,7 @@ class CreatePhoneNumbers < ActiveRecord::Migration
   def change
   	create_table :phone_numbers do |t|
   		t.text :number
-      t.boolean :subscribed
+      t.boolean :subscribed, :default => true
       t.integer :q_count, :null => false, :default => 1
 
       t.timestamps null: false

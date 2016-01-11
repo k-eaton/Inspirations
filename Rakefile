@@ -1,6 +1,6 @@
 require 'rake'
 require 'dotenv/tasks'
-require './app/helpers/twilio'
+# require './app/helpers/twilio'
 
 require ::File.expand_path('../config/environment', __FILE__)
 
@@ -140,12 +140,12 @@ task "console" do
   exec "irb -r./config/environment"
 end
 
-namespace :twilio do
-  desc 'Send a Twilio text'
-  task :text do
-    Twilio.text
-  end
-end
+# namespace :twilio do
+#   desc 'Send a Twilio text'
+#   task :text do
+#     Twilio.text
+#   end
+# end
 
 # In a production environment like Heroku, RSpec might not
 # be available.  To handle this, rescue the LoadError.

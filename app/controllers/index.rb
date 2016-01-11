@@ -7,10 +7,16 @@ require 'twilio-ruby'
 
  
 get '/' do
-    'Hello World! Currently running version ' + Twilio::VERSION + \
-        ' of the twilio-ruby library.'
+#     'Hello World! Currently running version ' + Twilio::VERSION + \
+#         ' of the twilio-ruby library.'
 
-    # erb :index
+#     # erb :index
+# end
+
+# get '/test' do
+
+@quotes = Quote.all
+
 end
 
 # post '/' do
