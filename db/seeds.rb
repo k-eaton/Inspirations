@@ -4,7 +4,9 @@
 
 # Quote.create(quote: "If you ain't no punk, holla we want prenup. It’s something that you need to have 'cause when she leave yo ass, she gonna leave with half. — Kanye West, 'Gold Digger'")
 # Quote.create(quote: "I am the number one human being in music. That means any person that's living or breathing is number two. - Kanye West")
-# Quote.create(quote: "I'm doing pretty good as far as geniuses go ... I'm like a machine. I'm a robot. You cannot offend a robot ... I'm going down as a legend, whether or not you like me or not. I am the new Jim Morrison. I am the new Kurt Cobain ... The Bible had 20, 30, 40, 50 characters in it. You don't think that I would be one of the characters of today's modern Bible? - Kanye West")
+# Quote.create(quote: "I'm doing pretty good as far as geniuses go ... I'm like a machine. I'm a robot. You cannot offend a robot. - Kanye West")
+# Quote.create(quote: "I'm going down as a legend, whether or not you like me or not. I am the new Jim Morrison. I am the new Kurt Cobain. - Kanye West")
+# Quote.create(quote: "The Bible had 20, 30, 40, 50 characters in it. You don't think that I would be one of the characters of today's modern Bible? - Kanye West")
 # Quote.create(quote: "I walk through the hotel and I walk down the street and people look at me like I\'m fucking insane, like I\'m Hitler. One day the light will shine through, and one day people will understand everything I ever did. - Kanye West")
 # Quote.create(quote: "I am God's vessel. But my greatest pain in life is that I will never be able to see myself perform live. - Kanye West")
 # Quote.create(quote: "Kim doesn’t understand what a blessing I am to her. - Kanye West")
@@ -58,6 +60,7 @@
 # Quote.create(quote: "I am Warhol. I am the No. 1 most impactful artist of our generation. I am Shakespeare in the flesh. Walt Disney. Nike. Google. - Kanye West")
 # Quote.create(quote: "I ain’t no muthafuckin celebrity. I ain’t runnin’ for office. I ain’t kissin’ nobody’s muthafuckin babies. I drop your baby and you muthafuckin sue me and shit. - Kanye West")
 # Quote.create(quote: "I still think I am the greatest. - Kanye West")
+# Quote.create(quote: "I have no interest in working with anyone who is too important or too good or too traditional to take a call at 3am. - Kanye West")
 
 # # Charlie Sheen
 

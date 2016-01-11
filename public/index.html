@@ -1,0 +1,22 @@
+<h1>Test</h1>
+
+<h1><%=@quotes%></h1>
+
+<ul>
+
+		<li><%= @quotes.quote %></li>
+
+</ul>
+
+<div class="container">
+
+  <h1>Welcome to Notes!</h1>
+  <%=erb :header %>
+  <% @notes.each do |note| %>
+    <h2><a href="/note/<%=note.id%>"><%= note.title %></a></h2>
+    <p><%= note.note %></p>
+  <% end %>
+
+  <h6><a href="/new">Create a new note!</a></h6>
+
+</div>

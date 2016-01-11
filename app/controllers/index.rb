@@ -1,5 +1,3 @@
-require 'unirest'
-require 'httparty'
 require 'dotenv'
 require 'twilio-ruby'
 
@@ -15,8 +13,12 @@ get '/' do
 
 # get '/test' do
 
-@quotes = Quote.all
-
+	@quotes = Quote.all
+	puts("test")
+	# @quotes.each do |quote|
+		# puts(@quotes.quote)
+	# end
+	erb :index
 end
 
 # post '/' do
