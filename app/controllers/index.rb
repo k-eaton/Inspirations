@@ -1,26 +1,57 @@
 require 'dotenv'
 require 'twilio-ruby'
 
+# enable :sessions
 
-
+# use Rack::Session::Cookie, :key => 'rack.session',
+#                            :domain => 'foo.com',
+#                            :path => '/',
+#                            :expire_after => 2592000, # In seconds
+#                            :secret => ENV['SECRET']
  
+use Rack::Session::Pool
+
 get '/' do
-#     'Hello World! Currently running version ' + Twilio::VERSION + \
-#         ' of the twilio-ruby library.'
-
-#     # erb :index
-# end
-
-# get '/test' do
 
 	@quotes = Quote.all
 	puts("test")
-	# @quotes.each do |quote|
-		# puts(@quotes.quote)
-	# end
+
 	erb :index
 end
 
+post '/signup' do
+	session[:number] = params[:phone].to_s
+
+	puts(session[:number])
+
+	PhoneNumber.create(number: session[:number])
+
+	redirect '/settings'
+
+end
+
+get '/settings' do
+
+	@number = PhoneNumber.find_by number:(session[:number])
+
+	puts(@number.subscribed)
+
+	erb :settings
+
+end
+
+post '/settings' do
+	@number = PhoneNumber.find_by number:(@pool)
+	@number.subscribed = params[:subscription]
+	@number.save
+
+	# @subscribed = params[:subscription].to_s
+
+	# put(subscribed)
+
+	redirect '/settings'
+
+end
 # post '/' do
 #   @marijuana = Report.where("description LIKE ?", '%MARIJUANA%')
 #   latlong = []
