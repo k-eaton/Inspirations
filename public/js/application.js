@@ -5,22 +5,23 @@ $(document).ready(function() {
 
   $("#myonoffswitch").change(function(event){
     // event.preventDefault
-    if ($("#myonoffswitch").serialize() == "onoffswitch=true")
-      {var formData = $("#myonoffswitch").serialize() + "&subscribed=false"}
+    console.log($("#myonoffswitch").serialize())
+    if ($("#myonoffswitch").serialize() == "onoffswitch=on")
+      {var formData = "subscription=true"}
     else
-      {var formData = $("#myonoffswitch").serialize() + "&subscribed=true"}
+      {var formData = "subscription=false"}
     console.log(formData)
     //Get data from dropdown
 
-    // var checkbox = $.ajax({
-    //   url: "/settings",
-    //   type: "GET",
-    //   data: formData,
-    //   datatype: 'json'
-    // })
-    // checkbox.done(function(ajaxResults){
-    // // console.log(ajaxResults)
-    // })
+    var checkbox = $.ajax({
+      url: "/settings",
+      type: "POST",
+      data: formData,
+      datatype: 'json'
+    })
+    checkbox.done(function(ajaxResults){
+    // console.log(ajaxResults)
+    })
   });
 
   // // Load the scores data. When the data comes back, create an overlay.

@@ -55,11 +55,12 @@ post '/settings' do
 	@number.save
 	puts(@number.subscribed)
 
+	@subscribed = params[:subscription]
+	puts(@subscribed)
+
 	puts("post/settings end")
 
-	# @subscribed = params[:subscription].to_s
 
-	# put(subscribed)
 
 	redirect '/settings'
 
