@@ -1,70 +1,27 @@
 $(document).ready(function() {
 
-// determine color and transparency of the markers
-
-  // function styling(drugType){
-  //   switch(drugType){
-  //     case "MARIJUANA":
-  //       console.log("switch")
-  //       return "rgba(74, 145, 48, 0.3)";
-  //       break;
-  //     case "COCAINE":
-  //       return "rgba(255, 0, 0, 0.3)";
-  //       break;
-  //     case "METH":
-  //       return "rgba(0, 0, 255, 0.3)";
-  //       break;
-  //     case "HEROIN":
-  //       return "rgba(100, 16, 16, 0.3)";
-  //       break;
-  //     case "HALLUCINOGENIC":
-  //       return "rgba(0, 0, 0, 0.3)"
-  //       break;
-  //     case "OPIUM":
-  //       return "rgba(72, 0, 32, 0.7)"
-  //       break;
-  //     default:
-  //       return "rgba(72, 0, 32, 0.3)";
-  //   }
-  // }
 
 
-  // //Google Map
 
-  // var map;
-  // function initialize() {
-  //   var mapOptions = {
-  //     zoom: 13,
-  //     center: new google.maps.LatLng(37.75, -122.445)
-  //   };
-  //   map = new google.maps.Map(document.getElementById('map-canvas'),
-  //       mapOptions);
-  // }
+  $("#myonoffswitch").change(function(event){
+    // event.preventDefault
+    if ($("#myonoffswitch").serialize() == "onoffswitch=true")
+      {var formData = $("#myonoffswitch").serialize() + "&subscribed=false"}
+    else
+      {var formData = $("#myonoffswitch").serialize() + "&subscribed=true"}
+    console.log(formData)
+    //Get data from dropdown
 
-  // google.maps.event.addDomListener(window, 'load', initialize);
-  // google.maps.event.addDomListener(window, "zoom_changed", initialize);
-
-  // // End Google Map
-
-
-  // $("#options").change(function(event){
-  //   // event.preventDefault
-  //   if ($("#dealers").serialize() == "dealers=true")
-  //     {var formData = $("#dropdown").serialize() + "&" + $("#dealers").serialize()}
-  //   else
-  //     {var formData = $("#dropdown").serialize() + "&dealers=false"}
-  //   console.log(formData)
-  //   $(".scores").empty()
-  //   //Get data from dropdown
-
-  //   var dropDown = $.ajax({
-  //     url: "/drugs",
-  //     type: "GET",
-  //     data: formData,
-  //     datatype: 'json'
-  //   })
-  //   dropDown.done(function(ajaxResults){
-  //   console.log(ajaxResults)
+    // var checkbox = $.ajax({
+    //   url: "/settings",
+    //   type: "GET",
+    //   data: formData,
+    //   datatype: 'json'
+    // })
+    // checkbox.done(function(ajaxResults){
+    // // console.log(ajaxResults)
+    // })
+  });
 
   // // Load the scores data. When the data comes back, create an overlay.
 
