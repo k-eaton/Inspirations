@@ -4,46 +4,58 @@ require 'twilio-ruby'
 # enable :sessions
 
 # use Rack::Session::Cookie, :key => 'rack.session',
-#                            :domain => 'foo.com',
+#                            # :domain => 'foo.com',
 #                            :path => '/',
 #                            :expire_after => 2592000, # In seconds
-#                            :secret => ENV['SECRET']
+#                            :secret => ENV['SECRET'] ||= 'super secret'
  
 use Rack::Session::Pool
 
 get '/' do
 
 	@quotes = Quote.all
-	puts("test")
+	puts("/ end")
 
 	erb :index
 end
 
 post '/signup' do
+	puts("/post signup start")
+
 	session[:number] = params[:phone].to_s
 
 	puts(session[:number])
 
 	PhoneNumber.create(number: session[:number])
-
+	puts("/post signup end")
 	redirect '/settings'
 
 end
 
 get '/settings' do
 
-	@number = PhoneNumber.find_by number:(session[:number])
+	puts("get/settings start")
+	puts(session[:number])
 
-	puts(@number.subscribed)
+	@number = PhoneNumber.find_by number:(session[:number])
+	@subscribed = @number.subscribed
+	# session[:id] = @number.id
+	puts(@subscribed)
+	puts("get/settings end")
 
 	erb :settings
 
 end
 
 post '/settings' do
-	@number = PhoneNumber.find_by number:(@pool)
+
+	puts("post/settings start")
+	@number = PhoneNumber.find_by number:(session[:number])
 	@number.subscribed = params[:subscription]
 	@number.save
+	puts(@number.subscribed)
+
+	puts("post/settings end")
 
 	# @subscribed = params[:subscription].to_s
 

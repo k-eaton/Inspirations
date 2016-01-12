@@ -2,13 +2,21 @@
 
 <h2>Subscribe?</h2>
 
-<form action="/signup" method="post" id="settings">
-	<p>
-	<select name="subscription" id="dropdown">
-	  	<option value="true"> On </option>
-	    <option value="false"> Off </option>
-	</select></p>
-	<p><input type="submit" /> </p>
+<form action="/settings" method="post" id="settings">
+	<!-- <p> -->
+
+	<div class="onoffswitch">
+	    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" <%= @subscribed == true ? "checked": "" %> >
+	    <label class="onoffswitch-label" for="myonoffswitch">
+	        <span class="onoffswitch-inner"></span>
+	        <span class="onoffswitch-switch"></span>
+	    </label>
+	</div>
+	<!-- <select name="subscription" id="dropdown"> -->
+	  	<!-- <option value="true"> On </option> -->
+	    <!-- <option value="false"> Off </option> -->
+	<!-- </select></p> -->
+	<!-- <p><input type="submit" /> </p> -->
 
 
 </form>
