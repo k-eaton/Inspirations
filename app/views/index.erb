@@ -2,19 +2,10 @@
 
 <div class="signup">
   <form action="/signup" method="post" id="number">
-  	<p>Phone number: <input type="text" name="phone"></p>
+  	<p><input type="text" name="phone" id="phone-login">
+		<span id="phone-format" class="helpPhone">US &amp; Canada numbers only</span>
+  	</p>
   	<p><input type="submit" /> </p>
 
   </form>
 </div>
-
-
-<ul>
-
-	<% @quotes.each do |quote| %>
-
-
-  <li><%= quote.quote %></li>
-
-	<% end %>
-</ul>
