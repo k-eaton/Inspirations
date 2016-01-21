@@ -1,7 +1,7 @@
 require 'dotenv'
 require 'twilio-ruby'
 
-module DailyText
+module Twilio
 
 	def text
 		# put your own credentials here 
@@ -13,9 +13,7 @@ module DailyText
 		from = "+13104218914" # Your Twilio number
 		 
 		quotes = Quote.all
-		quote_id = rand(quotes.length)
-		puts(quote_id)
-
+		quote_id = random(0, quotes.length)
 		quote = Quote.find_by(id: quote_id)
 
 		phone_numbers = PhoneNumber.all
@@ -23,11 +21,10 @@ module DailyText
 		phone_numbers.each do |number|
 		  client.account.messages.create(
 		    :from => from,
-		    :to => number.number,
-		    :body => quote.quote
+		    :to => number,
+		    :body => quote
 		  )
-		  puts "Sent message to #{number.number}"
-		  puts "#{quote.quote}"
+		  puts "Sent message to #{phone_number}"
 		end
 	end
 
