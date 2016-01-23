@@ -1,15 +1,30 @@
-html, body{
+html{
+  background-image: url(../img/Golden_sunrise.jpg);
+}
+body{
 
         height: 100%;
         margin: auto;
         padding: 0px;
-        width: 90%;
-        background-color: black;
+        width: 80%;
+        /*background-color: black;*/
         color: white;
         clear: both;
       }
 
+h1 {
+  font-family: 'Great Vibes', cursive; font-size: 96px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+}
 
+h2 {
+  float: left;
+}
+
+h3 {
+  float: right;
+}
 
 img {padding-bottom: 20px;}
 
@@ -23,40 +38,34 @@ p {
   padding-top: 10px;
 }
 
-.menu {
-  float: right;
-  margin: 150px 70px 0 0;
-}
-
-.scores, .scores svg {
-  position: absolute;
-}
-
-.scores circle {
-  fill: green;
-  stroke: black;
-  stroke-width: 1.5px;
-  opacity: 50%;
-}
-
-.scores rect {
-  fill: red;
-  stroke: black;
-  stroke-width: 1.5px;
+.help-phone {
+  color: white;
 }
 
 form {
   color: black;
 }
 
-form > span {
+#delete {
+  padding-top: 30px;
+}
+
+#quotes {
+  width: 400px;
+  float: right;
   color: white;
 }
 
+#quotes > p {
+  font-family: 'Poiret One', cursive; font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
 
 /* Switch */
 
 .onoffswitch {
+    clear: both;
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }

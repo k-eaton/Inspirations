@@ -25,6 +25,10 @@ post '/signup' do
 	puts("/post signup start")
 
 	# if params[:phone].to_s != nil
+		
+	@quotes = Quote.all
+	@quote_id = rand(@quotes.length)
+	@quote = Quote.find_by(id: quote_id)
 
 	session[:number] = params[:phone].to_s
 	@number = PhoneNumber.find_by number:(session[:number])
@@ -32,8 +36,6 @@ post '/signup' do
 		PhoneNumber.create(number: session[:number])
 		text(session[:number], "Welcome to Inspirations!")
 	end
-		
-
 	# puts(session[:number])
 
 	puts("/post signup end")

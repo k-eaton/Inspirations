@@ -177,5 +177,5 @@ Quote.create(quote: "Love, n. A temporary insanity curable by marriage. - Ambros
 Quote.create(quote: "We do not have to visit a madhouse to find disordered minds; our planet is the mental institution of the universe. - Johann Wolfgang von Goethe")
 Quote.create(quote: "If you're going to be crazy, you have to get paid for it or else you're going to be locked up. - Hunter S. Thompson")
 Quote.create(quote: "Eagles may soar, but weasels don’t get sucked into jet engines. - Unknown")
-
+Quote.create(quote: "A day without sunshine is like, you know, night. - Steve Martin")
 

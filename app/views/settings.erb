@@ -1,7 +1,7 @@
 <h1>Inspirations</h1>
 
 <h2>Subscribed?</h2>
-
+<h3>Logged in as <%=@number.number%></h3>
 <form action="/settings" method="post" id="settings">
 	<!-- <p> -->
 
@@ -19,11 +19,10 @@
 	<!-- <p><input type="submit" /> </p> -->
 </form>
 
-<p>
+
 <form action="/delete" method="post" id="delete">
 	<div class="delete">
 		<input type="checkbox" name="delete" class="delete-checkbox" id="mydeletecheckbox">
 		<input type="submit" value="Delete my number">
 	</div>
 </form>
-</p>
