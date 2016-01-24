@@ -15,7 +15,12 @@ use Rack::Session::Pool
 
 get '/' do
 
-	@quotes = Quote.all
+	quotes = Quote.all
+	quote_id1 = rand(quotes.length)
+	@quote1 = Quote.find_by(id: quote_id1)
+	quote_id2 = rand(quotes.length)
+	@quote2 = Quote.find_by(id: quote_id2)
+
 	puts("/ end")
 
 	erb :index
@@ -26,9 +31,6 @@ post '/signup' do
 
 	# if params[:phone].to_s != nil
 		
-	@quotes = Quote.all
-	@quote_id = rand(@quotes.length)
-	@quote = Quote.find_by(id: quote_id)
 
 	session[:number] = params[:phone].to_s
 	@number = PhoneNumber.find_by number:(session[:number])
