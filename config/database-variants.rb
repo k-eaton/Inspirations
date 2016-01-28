@@ -32,11 +32,11 @@ DB_NAME = db.path[1..-1]
 #   to :development
 
 ActiveRecord::Base.establish_connection(
-  :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
-  :host     => db.host,
-  :port     => db.port,
-  :username => db.user,
-  :password => db.password,
-  :database => DB_NAME,
+  :adapter  => 'postgresql', #db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+  :host     => ENV['RDS_HOSTNAME'], #'aa1vijj0xfvlihw.cymja2dnjbxf.us-west-2.rds.amazonaws.com', #db.host,
+  :port     => ENV['RDS_PORT'], #80, #db.port,
+  :username => ENV['RDS_USERNAME'], #'phrynne', #db.user,
+  :password => ENV['RDS_PASSWORD'], #'xs44idqq', #db.password,
+  :database => ENV['RDS_DB_NAME'], #'ebdb', #DB_NAME,
   :encoding => 'utf8'
 )
