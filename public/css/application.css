@@ -1,5 +1,7 @@
 html{
   background-image: url(../img/Golden_sunrise.jpg);
+  background-repeat: no-repeat;
+  background-color: black;
 }
 body{
 
