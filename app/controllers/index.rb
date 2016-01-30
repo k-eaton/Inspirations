@@ -104,10 +104,18 @@ post '/delete' do
 end
 
 get '/sms' do
-  twiml = Twilio::TwiML::Response.new do |r|
-    r.Message "Hey Monkey. Thanks for the message!"
-  end
-  twiml.text
+	incoming = Twilio::TwiML::Response.new do |r|
+		if r.upcase == "STOP" || r.upcase == "UNSUBSCRIBE"
+			r.Message "You have been unsubscribed"
+		end
+	incoming.text
+
+
+
+  # twiml = Twilio::TwiML::Response.new do |r|
+  #   r.Message "Hey Monkey. Thanks for the message!"
+  # end
+  # twiml.text
 end
 
 error do
