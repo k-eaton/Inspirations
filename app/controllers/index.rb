@@ -105,8 +105,8 @@ end
 
 get '/sms' do
 	incoming = Twilio::TwiML::Response.new do |r|
-		if r.upcase == "STOP" || r.upcase == "UNSUBSCRIBE"
-			r.Message "You have been unsubscribed"
+		if r.upcase == "START" || r.upcase == "SUBSCRIBE"
+			r.Message "You have subscribed to Inspirations"
 		end
 	incoming.text
 
