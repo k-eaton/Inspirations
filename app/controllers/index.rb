@@ -34,9 +34,13 @@ post '/signup' do
 
 	session[:number] = params[:phone].to_s
 	@number = PhoneNumber.find_by number:(session[:number])
+	quotes = Quote.all
+	quote_id = rand(quotes.length)
+	quote = Quote.find_by(id: quote_id1)
 	if @number == nil || @number.number == "f"
 		PhoneNumber.create(number: session[:number])
 		text(session[:number], "Welcome to Inspirations!")
+		text(session[number], quote)
 	end
 	# puts(session[:number])
 
