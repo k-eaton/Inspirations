@@ -40,7 +40,7 @@ post '/signup' do
 	if @number == nil || @number.number == "f"
 		PhoneNumber.create(number: session[:number])
 		text(session[:number], "Welcome to Inspirations!")
-		text(session[:number], quote)
+		text(session[:number], quote.quote)
 	end
 	# puts(session[:number])
 
