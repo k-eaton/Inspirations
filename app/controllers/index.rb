@@ -104,11 +104,11 @@ post '/delete' do
 end
 
 get '/sms' do
-	incoming = Twilio::TwiML::Response.new do |r|
-		if r.upcase == "START" || r.upcase == "SUBSCRIBE"
-			r.Message "You have subscribed to Inspirations"
-		end
-	incoming.text
+	# incoming = Twilio::TwiML::Response.new do |r|
+	# 	if r.upcase == "START" || r.upcase == "SUBSCRIBE"
+	# 		r.Message "You have subscribed to Inspirations"
+	# 	end
+	# incoming.text
 
 
 
