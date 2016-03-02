@@ -19,16 +19,18 @@ module DailyText
 		quote = Quote.find_by(id: quote_id)
 
 		phone_numbers = PhoneNumber.all
-
 		phone_numbers.each do |number|
-		  client.account.messages.create(
-		    :from => from,
-		    :to => number.number,
-		    :body => quote.quote
-		  )
-		  puts "Sent message to #{number.number}"
-		  puts "#{quote.quote}"
+			begin
+			  client.account.messages.create(
+			    :from => from,
+			    :to => number.number,
+			    :body => quote.quote
+			  )
+			  puts "Sent message to #{number.number}"
+			  puts "#{quote.quote}"
+			rescue Twilio::REST::RequestError => e
+				puts e.message
+			end
 		end
 	end
-
 end

@@ -103,6 +103,12 @@ post '/delete' do
 	redirect '/'
 end
 
+get '/backend' do
+	@numbers = PhoneNumber.all
+
+	erb :backend
+end
+
 get '/sms' do
 	# incoming = Twilio::TwiML::Response.new do |r|
 	# 	if r.upcase == "START" || r.upcase == "SUBSCRIBE"
@@ -118,7 +124,7 @@ get '/sms' do
   # twiml.text
 end
 
-error do
-	"You must enter a phone number."
-	redirect '/'
-end
+# error do
+# 	"You must enter a phone number."
+# 	redirect '/'
+# end
