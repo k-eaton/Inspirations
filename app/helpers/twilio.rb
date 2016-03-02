@@ -12,14 +12,6 @@ module DailyText
 		 
 		from = "+13104218914" # Your Twilio number
 
-
-		# quotes = Quote.all
-		# quote_id = rand(quotes.length)
-		# puts(quote_id)
-
-		# quote = Quote.find_by(id: quote_id)
-
-
 		phone_numbers = PhoneNumber.all
 		quote_quotes = Quote.all
 		phone_numbers.each do |number|
@@ -43,7 +35,7 @@ module DailyText
 			number.quote_array.slice!(rand_quote)
 			number.save
 
-
+			# Final quote id
 			quote = Quote.find_by(id: quote_id)
 
 		###### Sending the texts ######
