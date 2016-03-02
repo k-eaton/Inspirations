@@ -11,15 +11,43 @@ module DailyText
 		client = Twilio::REST::Client.new account_sid, auth_token
 		 
 		from = "+13104218914" # Your Twilio number
-		 
-		quotes = Quote.all
-		quote_id = rand(quotes.length)
-		puts(quote_id)
 
-		quote = Quote.find_by(id: quote_id)
+
+		# quotes = Quote.all
+		# quote_id = rand(quotes.length)
+		# puts(quote_id)
+
+		# quote = Quote.find_by(id: quote_id)
+
 
 		phone_numbers = PhoneNumber.all
+		quote_quotes = Quote.all
 		phone_numbers.each do |number|
+			
+		###### Quotes ######
+			# puts(number.quote_array)
+			# puts(num_quotes)
+
+			# Refill the quote_array if empty 
+			if number.quote_array == []
+				number.quote_array = (0...quote_quotes.length).to_a
+
+				number.save
+			end
+
+			# Pick a random quote
+			num_quotes = number.quote_array
+			rand_quote = rand(num_quotes.length - 1)
+			puts(rand_quote)
+			quote_id = number.quote_array[rand_quote]
+			number.quote_array.slice!(rand_quote)
+			number.save
+
+
+			quote = Quote.find_by(id: quote_id)
+
+		###### Sending the texts ######
+			
 			begin
 			  client.account.messages.create(
 			    :from => from,

@@ -61,7 +61,7 @@
 # Quote.create(quote: "I ain’t no muthafuckin celebrity. I ain’t runnin’ for office. I ain’t kissin’ nobody’s muthafuckin babies. I drop your baby and you muthafuckin sue me and shit. - Kanye West")
 # Quote.create(quote: "I still think I am the greatest. - Kanye West")
 # Quote.create(quote: "I have no interest in working with anyone who is too important or too good or too traditional to take a call at 3am. - Kanye West")
-Quote.create(quote: "I won’t go into a big spiel about reincarnation, but the first time I was in the Gucci store in Chicago was the closest I’ve ever felt to home. - Kanye West")
+# Quote.create(quote: "I won’t go into a big spiel about reincarnation, but the first time I was in the Gucci store in Chicago was the closest I’ve ever felt to home. - Kanye West")
 
 # # Charlie Sheen
 
@@ -179,13 +179,13 @@ Quote.create(quote: "I won’t go into a big spiel about reincarnation, but the 
 # Quote.create(quote: "If you're going to be crazy, you have to get paid for it or else you're going to be locked up. - Hunter S. Thompson")
 # Quote.create(quote: "Eagles may soar, but weasels don’t get sucked into jet engines. - Unknown")
 # Quote.create(quote: "A day without sunshine is like, you know, night. - Steve Martin")
-Quote.create(quote: "A zebra does not change its spots. - Al Gore")
-Quote.create(quote: "Things have never been more like the way they are today in history. - Dwight D. Eisenhower")
-Quote.create(quote: "Facts are stupid things. - Ronald Reagan")
-Quote.create(quote: "My fear is that the whole island will become so overly populated that it will tip over and capsize. - Hank Johnson")
-Quote.create(quote: "If you take out the killings, Washington actually has a very very low crime rate. - Marion Barry")
-Quote.create(quote: "Those who survived the San Francisco earthquake said, ‘Thank God, I'm still alive.' But, of course, those who died, their lives will never be the same again. - Barbara Boxer")
-Quote.create(quote: "We'd like to avoid problems, because when we have problems, we can have troubles. - Wesley Bolin")
+# Quote.create(quote: "A zebra does not change its spots. - Al Gore")
+# Quote.create(quote: "Things have never been more like the way they are today in history. - Dwight D. Eisenhower")
+# Quote.create(quote: "Facts are stupid things. - Ronald Reagan")
+# Quote.create(quote: "My fear is that the whole island will become so overly populated that it will tip over and capsize. - Hank Johnson")
+# Quote.create(quote: "If you take out the killings, Washington actually has a very very low crime rate. - Marion Barry")
+# Quote.create(quote: "Those who survived the San Francisco earthquake said, ‘Thank God, I'm still alive.' But, of course, those who died, their lives will never be the same again. - Barbara Boxer")
+# Quote.create(quote: "We'd like to avoid problems, because when we have problems, we can have troubles. - Wesley Bolin")
 
 
 
