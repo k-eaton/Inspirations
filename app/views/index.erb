@@ -14,12 +14,17 @@
 
 <h1>Inspirations</h1>
 
-<div class="signup">
+<div id="signup">
   <form action="/signup" method="post" id="number">
-  	<p><input type="text" name="phone" id="phone-login"></p>
+  	<p><input type="text" name="phone" id="phoneUS"></p>
+	<p><span id="phone-format" class="help-phone">Insert your phone number for</span>
+	<br /><span id="phone-format" class="help-phone">daily quote goodness</span>
 	<p><span id="phone-format" class="help-phone">US &amp; Canada numbers only</span>
   	</p>
   	<p><input type="submit" /> </p>
 
   </form>
+  <script>
+$("#number").validate();
+</script>
 </div>

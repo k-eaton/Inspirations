@@ -17,8 +17,6 @@ module DailyText
 		phone_numbers.each do |number|
 			
 		###### Quotes ######
-			# puts(number.quote_array)
-			# puts(num_quotes)
 
 			# Refill the quote_array if empty 
 			if number.quote_array == []

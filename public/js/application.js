@@ -1,9 +1,12 @@
 $(document).ready(function() {
 
 
-  $("#phone-login").mask("999-999-9999");
+  $("#phoneUS").mask("999-999-9999");
 
-  
+  $("#signup").validate({rules: {
+    // #phone-login
+    phoneUS: "required"
+  }})
 
   $("#myonoffswitch").change(function(event){
     // event.preventDefault
