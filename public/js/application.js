@@ -19,7 +19,7 @@ $(document).ready(function() {
     //Get data from dropdown
 
     var checkbox = $.ajax({
-      url: "/settings",
+      url: "/quote-settings",
       type: "POST",
       data: formData,
       datatype: 'json'
