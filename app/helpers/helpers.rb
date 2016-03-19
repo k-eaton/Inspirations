@@ -1,6 +1,7 @@
 
 require 'dotenv'
 require 'twilio-ruby'
+require 'mail'
 
 helpers do
 # module Twilio
@@ -28,5 +29,12 @@ helpers do
 		  )
 		  puts "Sent message to #{phone_number}"
 		# end
+	end
+
+	def email()
+
+
+
+
 	end
 end

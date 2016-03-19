@@ -36,6 +36,8 @@ GEM
     i18n (0.7.0)
     json (1.8.2)
     jwt (1.5.1)
+    mail (2.6.3)
+      mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
@@ -106,6 +108,7 @@ DEPENDENCIES
   factory_girl
   faker
   httparty
+  mail
   pg
   rack (~> 1.6, >= 1.6.4)
   rack-test
@@ -117,3 +120,6 @@ DEPENDENCIES
   sinatra-contrib
   twilio-ruby
   unirest
+
+BUNDLED WITH
+   1.11.2

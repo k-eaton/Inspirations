@@ -26,9 +26,9 @@ get '/' do
 	erb :index
 end
 
-post '/signup' do
+post '/quote-signup' do
 
-	puts("*** /post signup start")
+	puts("*** /post quote-signup start")
 	
 	# Set session
 	session[:number] = params[:phone].to_s
@@ -48,11 +48,11 @@ post '/signup' do
 
 	puts("*** /post signup end")
 
-	redirect '/settings'
+	redirect '/quote-settings'
 
 end
 
-get '/settings' do
+get '/quote-settings' do
 
 	puts("*** get/settings start")
 	puts(session[:number])
@@ -71,11 +71,11 @@ get '/settings' do
 		"Phone number does not exist"
 	end
 
-	erb :settings
+	erb :'quote-settings'
 
 end
 
-post '/settings' do
+post '/quote-settings' do
 
 	puts("*** post/settings start")
 
@@ -97,13 +97,13 @@ post '/settings' do
 	@subscribed = params[:subscription]
 	puts(@subscribed)
 
-	puts("post/settings end")
+	puts("post/quote-settings end")
 
-	redirect '/settings'
+	redirect '/quote-settings'
 
 end
 
-post '/delete' do
+post '/quote-delete' do
 
 	# Continue Session
 	@number = PhoneNumber.find_by number:(session[:number])
@@ -118,10 +118,10 @@ post '/delete' do
 	redirect '/'
 end
 
-get '/backend' do
+get '/quote-backend' do
 	@numbers = PhoneNumber.all
 
-	erb :backend
+	erb :'quote-backend'
 end
 
 get '/sms' do

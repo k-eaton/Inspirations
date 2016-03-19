@@ -2,7 +2,7 @@
 
 <h2>Subscribed?</h2>
 <h3>Logged in as <%=@number.number%></h3>
-<form action="/settings" method="post" id="settings">
+<form action="/quote-settings" method="post" id="settings">
 	<!-- <p> -->
 
 	<div class="onoffswitch">
@@ -20,7 +20,7 @@
 </form>
 
 
-<form action="/delete" method="post" id="delete">
+<form action="/quote-delete" method="post" id="delete">
 	<div class="delete">
 		<input type="checkbox" name="delete" class="delete-checkbox" id="mydeletecheckbox">
 		<input type="submit" value="Delete my number">

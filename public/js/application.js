@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $("#phoneUS").mask("999-999-9999");
 
-  $("#signup").validate({rules: {
+  $("#quote-signup").validate({rules: {
     // #phone-login
     phoneUS: "required"
   }})
