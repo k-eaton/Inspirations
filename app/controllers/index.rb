@@ -175,3 +175,11 @@ post '/recipe-signup' do
 	redirect '/recipe-settings'
 
 end
+
+get '/recipe-test' do
+
+	@recipes = Recipe.all
+
+	erb :'recipe-test'
+
+end
