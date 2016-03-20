@@ -188,6 +188,9 @@
 # Quote.create(quote: "We'd like to avoid problems, because when we have problems, we can have troubles. - Wesley Bolin")
 
 
+### Recipes ###
 
-
+Recipe.create(title: "Summer Salad Pie", ingredients: ["1 pkg (3 oz) lemon-flavored gelatin", "1-1/4 cups boiling water", "1 can (8 oz) tomato sauce", "1 Tbsp vinegar", "1/2 tsp salt", "Few drops each Worcestershire sauce and tabasco", "Dash pepper", "1/2 cup each chopped celery and pimiento-stuffed olives", "1/4 cup chopped onion", "Cheese Pie Shell (below)", "Tuna Salad (below)"], instructions: "Dissolve gelatin in boiling water. Stir in tomato sauce, vinegar, and seasonings. Chill until slightly thickened. Fold in celery, olives, and onion. Pour into cooled Cheese Pie Shell. Chill thoroughly. Spoon Tuna Salad on top of pie. 6 servings.", images: ["img/summersalad1.png", "img/summersalad2.png"])
+Recipe.create(title: "Cheese Pie Shell", ingredients: ["1 cup Gold Medal Flour (regular or Wondra)", "1/2 tsp salt", "1/3 cup plus 1 Tbsp shortening or 1/3 cup lard", "1/2 cup shredded sharp Cheddar cheese", "2 Tbsp water"], instructions: 'Heat oven to 475&deg;. Mix flour and salt. Cut in shortening thoroughly. Stir in cheese. Sprinkle water gradually over mixture, 1 Tbsp at a time, tossing lightly with a fork after each addition. (If dough appears dry, a few drops of water may be added.) Gather dough into a ball. On a lightly floured cloth-covered board, roll out 1" larger than inverted 9" pie pan. Ease into pan; flute and prick pastry. Bake 8 to 10 minutes; cool.', images: ["img/summersalad1.png", "img/summersalad2.png"])
+Recipe.create(title: "Tuna Salad", ingredients: ["1 can (6-1/2 oz) tuna, drained", "1 tsp lemon juice", "1 tsp minced onion", "1 cup diced celery", "Salt", "Paprika", "Mayonnaise or salad dressing"], instructions: "Lightly mix tuna, lemon juice, onion, and celery. Season with salt and paprika to taste. Chill. Just before serving, drain and mix in just enough mayonnaise to moisten.", images: ["img/summersalad1.png", "img/summersalad2.png"])
 
