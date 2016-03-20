@@ -3,6 +3,13 @@
 	<li>
 		<%= x.title %>
 		<ul>
+			<% x.images.each do |img| %>
+				<li class="img">
+					<img src="<%=img%>" />
+				</li>
+			<% end %>
+		</ul>				
+		<ul>
 			<% x.ingredients.each do |ingred| %>
 				<li><%=ingred%></li>
 			<% end %>
