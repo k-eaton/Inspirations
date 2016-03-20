@@ -23,7 +23,7 @@ gem 'httparty'
 gem 'dotenv'
 
 gem 'twilio-ruby'
-gem 'mail'
+gem 'pony'
 
 group :test do
   gem 'shoulda-matchers'

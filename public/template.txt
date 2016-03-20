@@ -34,7 +34,7 @@ body[yahoo] .pad {padding-top: 10px !important;}
   <td bgcolor="#eee"><div align="center" style="padding: 0px;">
     <table border="0" class="fullwidth" cellpadding="0" cellspacing="0" width="640">
      <tr>
-      <td class="mobile-border" style="padding:0px;border: 1px solid #ccc; border-top: none;background-color: #ffffff" bgcolor="#ffffff">
+      <td class="mobile-border" style="padding:0px;border: 1px solid #ccc; border-top: none; border-bottom: none; background-color: #ffffff" bgcolor="#ffffff">
       
       <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#fff">
         <tr>
@@ -48,16 +48,33 @@ body[yahoo] .pad {padding-top: 10px !important;}
 </table>
 <!--/end logo -->
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="640" align="center">
  <tr>
-  <td bgcolor="#eee"><div align="center" style="padding: 0px;">
+  <td bgcolor="#fff"><div align="center" style="padding: 0px;">
     <table border="0" class="fullwidth" cellpadding="0" cellspacing="0" width="640">
      <tr>
-      <td class="mobile-border" style="padding:0px;border: 1px solid #ccc; border-top: none;background-color: #ffffff" bgcolor="#ffffff">
+      <td class="mobile-border" style="padding:0px;border: 1px solid #ccc; border-top: none; border-bottom: none; background-color: #ffffff" bgcolor="#ffffff">
       
       <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#fff">
         <tr>
-         <td class="header" bgcolor="#000" align="left" style="padding: 20px 20px 20px 20px;"><img alt="Recipe Inspirations logo" src="http://127.0.0.1:9393/img/recipe-logo.gif" style="max-width:100%;" class="img-header"></td>
+         <td class="header" bgcolor="#000" align="left" style="width: 50%; padding: 20px 20px 20px 20px;"><img alt="Recipe Image" src="http://127.0.0.1:9393/img/summersalad1.png" style="max-width:100%;" class="img-header"><br><img alt="Recipe Image" src="http://127.0.0.1:9393/img/summersalad2.png" style="max-width:100%;" class="img-header"></td>
+     	<td>
+	     	<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%"bgcolor="#000">
+         		<tr>
+			        <td class="recipe" bgcolor="#000" width="100%" align="center" style="padding: 20px; color: white;"><h1><%=@recipe_of_the_day.title%></h1></td>
+		        </tr>
+		        <tr>
+		        	<td bgcolor="#000" width="100%" height="100%" align="left" style="padding: 20px; color: white;">
+		        		<ul>
+		        			<li>test</li>
+		        			<li>test</li>
+		        			<li>test</li>
+		        			<li>test</li>
+	        			</ul>
+        			</td>
+    			</tr>
+         	</table>
+		</td>
         </tr>
        </table></td>
      </tr>
