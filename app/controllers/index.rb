@@ -13,6 +13,9 @@ set :show_exceptions, false
  
 use Rack::Session::Pool
 
+
+###########Inspirational Quotes###########
+
 get '/' do
 
 	quotes = Quote.all
@@ -139,7 +142,36 @@ get '/sms' do
   # twiml.text
 end
 
-# error do
-# 	"You must enter a phone number."
-# 	redirect '/'
-# end
+###########Inspirational Recipes###########
+
+get '/recipes' do
+
+
+	erb :'recipe-index'
+end
+
+post '/recipe-signup' do
+
+	puts("*** /post recipe-signup start")
+	
+	# Set session
+	session[:number] = params[:email].to_s
+	@email = PhoneNumber.find_by number:(session[:number])
+
+	# Pick a recipe
+	quotes = Quote.all
+	quote_id = rand(quotes.length)
+	quote = Quote.find_by(id: quote_id)
+
+	# If number is new, add it to the database
+	if @number == nil || @number.number == "f"
+		PhoneNumber.create(number: session[:number])
+		text(session[:number], "Welcome to Inspirations!")
+		text(session[:number], quote.quote)
+	end
+
+	puts("*** /post signup end")
+
+	redirect '/recipe-settings'
+
+end

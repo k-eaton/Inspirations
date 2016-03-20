@@ -1,8 +1,9 @@
-html{
+html {
   background-image: url(../img/Golden_sunrise.jpg);
   background-repeat: no-repeat;
   background-color: black;
 }
+
 body{
 
         height: 100%;
@@ -40,12 +41,14 @@ p {
   padding-top: 10px;
 }
 
-.help-phone {
-  color: white;
-}
-
 form {
   color: black;
+}
+
+/* Quotes */
+
+.help-phone {
+  color: white;
 }
 
 #delete {
@@ -62,6 +65,23 @@ form {
   font-family: 'Poiret One', cursive; font-size: 24px;
   font-weight: bold;
   padding-bottom: 50px;
+}
+
+/* recipe */
+
+.help-recipe {
+  color: white;
+}
+
+#recipe-wrapper {
+  background-color: black;
+  border-left: solid 2px white;
+  border-bottom: solid 2px white;
+  border-right: solid 2px white;
+  padding: 30px 40px 450px 40px;
+  background-image: url(../img/vegetable-trio-salad.png);
+  max-width: 1220px;
+  // background-position: center;
 }
 
 /* Switch */
