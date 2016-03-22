@@ -150,7 +150,7 @@ get '/recipes' do
 	erb :'recipe-index'
 end
 
-post '/recipe-signup' do
+post '/recipes-signup' do
 
 	puts("*** /post recipe-signup start")
 	
@@ -172,11 +172,11 @@ post '/recipe-signup' do
 
 	puts("*** /post signup end")
 
-	redirect '/recipe-settings'
+	redirect '/recipes-settings'
 
 end
 
-get '/recipe-test' do
+get '/recipes-test' do
 
 	@recipes = Recipe.all
 
