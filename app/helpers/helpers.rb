@@ -1,7 +1,6 @@
 
 require 'dotenv'
 require 'twilio-ruby'
-require 'pony'
 
 helpers do
 # module Twilio
