@@ -24,7 +24,7 @@ gem 'dotenv'
 
 gem 'twilio-ruby'
 gem 'rest-client'
-gem 'mailgun-ruby'
+gem 'mailgun-ruby', '~>1.1.0', require: 'mailgun'
 
 group :test do
   gem 'shoulda-matchers'

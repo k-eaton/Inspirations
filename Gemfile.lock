@@ -36,6 +36,9 @@ GEM
     i18n (0.7.0)
     json (1.8.2)
     jwt (1.5.1)
+    mailgun-ruby (1.1.0)
+      json (~> 1.8)
+      rest-client (~> 1.6)
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
@@ -106,10 +109,12 @@ DEPENDENCIES
   factory_girl
   faker
   httparty
+  mailgun-ruby (~> 1.1.0)
   pg
   rack (~> 1.6, >= 1.6.4)
   rack-test
   rake
+  rest-client
   rspec (~> 3.0)
   shotgun (~> 0.9.1)
   shoulda-matchers
