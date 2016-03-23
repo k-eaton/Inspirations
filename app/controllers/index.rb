@@ -183,3 +183,12 @@ get '/recipes-test' do
 	erb :'recipe-test'
 
 end
+
+get '/recipes-list' do
+
+	recipe = Recipe.all
+	@recipes = recipe.sort_by {|t| [t.title, t.id]}
+
+	erb :'recipe-list'
+
+end

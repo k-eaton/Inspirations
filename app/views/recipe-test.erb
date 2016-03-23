@@ -1,8 +1,9 @@
 <ul>
 	<% @recipes.each do |x|%>
-	<li>
+	<li class="recipe">
 		<%= x.title %>
-		<img src="<%=x.image %>" />
+		<%= x.subtitle %>
+		<img class="recipe-pic" src="<%=x.image %>" />
 		<ul>
 			<% x.ingredients.each do |ingred| %>
 				<li><%=ingred%></li>

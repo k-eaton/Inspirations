@@ -73,6 +73,16 @@ form {
   color: white;
 }
 
+.recipe {
+  clear: left;
+}
+
+.recipe-pic {
+  float: left;
+  max-width: 300px;
+  clear: both;
+}
+
 #recipe-wrapper {
   background-color: black;
   border-left: solid 2px white;
@@ -83,6 +93,7 @@ form {
   max-width: 1220px;
   // background-position: center;
 }
+
 
 /* Switch */
 
